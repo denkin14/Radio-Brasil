@@ -1,461 +1,338 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!--Variety music--><!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+     <meta charset="utf-8">
+
+    <title>Radio Brazil - Stream Brazil Radio Online</title>
+    <script data-ad-client="ca-pub-6831791648891300" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <meta name="format-detection" content="telephone=no">
+    <meta name ="application-name" content="radiobrasil.nodemtech.com">
+    <meta name="description" content="Radio Brasil App, Radio Brazil, Listen/Stream Live all your favourite Brazil brasil Radio Stations Online for Free. Click on your FM station and Enjoy"> 
     <meta name="keywords" content="Radio Brasil App, radio brazil app, listen to free internet radio, nodem tech, listen to brasil brazil radio for free, free radio app, top brazilian radio stations, record live radio, radio app, radio love in brasil, Radio Alfa FM, Rádio Transcontinental FM, Rádio JB FM, Rádio Antena 1, Dumont FM, ZYX820, Energia 97, Ràdio Itapoan FM, Rádio Gaúcha, Rádio Alvorada FM, Rádio Inconfidência, Rádio Bossa Jazz Brasil, Rádio Bahia FM, Boa Vista FM, Rede Skol, Radio Cidade, Ràdio Jovem Pan SP,Latina Brasil, Rádio Saudade FM, Sant'Ana FM, Cantate FM, Rede Melodia, Transamérica Pop, Rádio Rio de Janeiro, 1.FM - Love Classics, ZYD463, Amor Sem Fim, Alvorada FM, Kiss FM, Gaúcha, listen to internet radio, best brazilian radio, top radio stations in brazil">
+    <meta name ="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <link rel="icon" href="images/RkeLogo3.png" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:100,300,300i,400,700,900">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css" id="main-styles-link">
+    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+     <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
+  </head>
+  <body>
 
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
 
-    <!-- Title -->
-    <title>	Radio Brazil - Listen to Brazil Radio</title>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-analytics.js"></script>
 
-    <!-- Favicon -->
-    <link rel="icon" href="img/core-img/logo2.png">
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
 
-    <!-- Core Stylesheet -->
-    <link href="style.css" rel="stylesheet">
 
-    <!-- Responsive CSS -->
-    <link href="css/responsive.css" rel="stylesheet">
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyDY_DtwjB09cX03SbSwqLmf1I1s3bnpxYc",
+    authDomain: "maletio.firebaseapp.com",
+    databaseURL: "https://maletio.firebaseio.com",
+    projectId: "maletio",
+    storageBucket: "maletio.appspot.com",
+    messagingSenderId: "836621927695",
+    appId: "1:836621927695:web:aabfe5113e109d54412a7a",
+    measurementId: "G-C3TR06JP9V"
+  };
 
-</head>
 
-<body>
-    <!-- ***** Preloader Start ***** -->
-    <div id="preloader">
-        <div class="selene-preloader"></div>
+  // Initialize Firebase
+
+
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+
+  var db = firebase.firestore();
+
+
+</script>
+
+
+
+
+
+    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <div class="preloader">
+      <div class="preloader-body">
+        <div class="cssload-container">
+          <div class="cssload-speeding-wheel"></div>
+        </div>
+      </div>
     </div>
-
-    <!-- ***** Header Area Start ***** -->
-    <header class="header_area animated">
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <!-- Menu Area Start -->
-                <div class="col-12">
-                    <div class="menu_area">
-                        <nav class="navbar navbar-expand-lg navbar-light">
-                            <!-- Logo -->
-                            <img src="img/bg-img/logo3.png" alt="">
-                            <a class="navbar-brand" href="#" ></a>
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#selene-navbar" aria-controls="selene-navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                            <!-- Menu Area -->
-                            <div class="collapse navbar-collapse" id="selene-navbar">
-                                <ul class="navbar-nav ml-auto" id="nav">
-                                    <li class="nav-item active"><a class="nav-link" href="https://play.google.com/store/apps/details?id=com.nodemtech.radiobrasil"><strong>Radio Brazil</strong></a></li>
-                                   
-                                    
-                                </ul>
-                                <!-- Search btn -->
-                                
-                            </div>
-                            <!-- Search btn -->
-                            
-                        </nav>
-                    </div>
+    <div class="page">
+      <!-- Page Header--><!-- <a class="banner banner-top" href="https://www.templatemonster.com/website-templates/monstroid2.html" target="_blank"><img src="images/monstroid_02.jpg" alt="" height="0"/></a> -->
+      <header class="section page-header">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap rd-navbar-absolute">
+          <nav class="rd-navbar rd-navbar-creative" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="20px" data-xl-stick-up-offset="20px" data-xxl-stick-up-offset="20px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+            <div class="rd-navbar-main-outer">
+              <div class="rd-navbar-main">
+                <!-- RD Navbar Panel-->
+                <div class="rd-navbar-panel">
+                  <!-- RD Navbar Toggle-->
+                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                  <!-- RD Navbar Brand-->
+                  <div class="rd-navbar-brand"><a class="brand" href="index.html"><img src="images/RkeLogo3.png" alt="" width="45" height="24"/></a>
+                  </div>
                 </div>
+                <div class="rd-navbar-main-element">
+                  <div class="rd-navbar-nav-wrap">
+                    <!-- RD Navbar Nav-->
+                    <ul class="rd-navbar-nav">
+                      <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Home</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="about.html">About</a>
+                      </li>
+                      
+                      
+                    </ul>
+                  </div>
+                  <!-- RD Navbar Search-->
+                  <div class="rd-navbar-search">
+                    <button class="rd-navbar-search-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-search"><span></span></button>
+                    <form class="rd-search" action="#" method="GET">
+                      <div class="form-wrap">
+                        <label class="form-label" for="rd-navbar-search-form-input">Search</label>
+                        <input class="rd-navbar-search-form-input form-input" id="rd-navbar-search-form-input" type="text" name="s" autocomplete="off">
+                        <div class="rd-search-results-live" id="rd-search-results-live"></div>
+                      </div>
+                      <button class="rd-search-form-submit mdi mdi-magnify" type="submit"></button>
+                    </form>
+                  </div>
+                </div>
+              </div>
             </div>
+          </nav>
         </div>
-    </header>
-    <!-- ***** Header Area End ***** -->
-
-    <!-- ***** Search Form Area Start ***** -->
-    <div class="search-form-area">
-        <!-- Remove btn -->
-        <div class="remove-btn">
-            <i class="fa fa-times"></i>
-        </div>
-        <!-- Search Form -->
-        <form action="#" method="post">
-            <input type="search" name="search" id="search" placeholder="Type keywords &amp; hit enter">
-            <button type="submit" class="d-none"><img src="img/core-img/search-icon.png" alt="Search"></button>
-        </form>
-    </div>
-    <!-- ***** Search Form Area End ***** -->
-
-    <!-- ***** Wellcome Area Start ***** -->
-    <section class="welcome_area clearfix" id="home">
-
-        <!-- Shape -->
-        <div class="welcome-bg-shape">
-            <img class="welcome-first-shape" src="img/core-img/welcome-bg-12.png" alt="">
-            <img class="welcome-second-shape" src="img/core-img/welcome-bg-23.png" alt="">
-        </div>
-
-        <div class="container h-100">
-            <div class="row h-100 align-items-center">
-                <div class="col-12 col-md-7">
-                    <div class="welcome-content">
-                        <h2><span>Bringing </span> The World Closer To You</h2>
-                        <h5>Radio Brazil (Brasil), Allows you to listen and record live to over 3000+ Brazilian Radio stations for Free. Enjoy local and international radio in Portuguese and English.</h5>
-                    </div>
-                    <div class="app-download-area">
-                        <div class="app-download-btn active">
-                            <!-- Google Store Btn -->
-                            <a href="https://play.google.com/store/apps/details?id=com.nodemtech.radiobrasil"><i class="fa fa-android"></i><p class="mb-0"><span>available on</span> Google PLay Store</p></a>
-                        </div>
-                       
-                    </div>
-                    <!-- Scroll btn -->
-                    <div class="scroll-down-btn">
-                        <a href="#about" class="scrollDown">Scroll Down <i class="fa fa-angle-double-down scroll-down" aria-hidden="true"></i></a>
-                    </div>
+      </header>
+      <!-- Swiper-->
+      <section class="section swiper-container swiper-slider swiper-slider-2" data-loop="false" data-autoplay="false" data-simulate-touch="false" data-slide-effect="fade">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide context-dark" data-slide-bg="images/cov.jpg">
+            <div class="swiper-slide-caption">
+              <div class="container">
+                <div class="row justify-content-lg-left">
+                  <div class="col-md-12 col-xl-10">
+                    <h1 data-caption-animate="fadeInUp" data-caption-delay="100">Listen From Anywhere in the World</h1><a class="button button-lg button-primary" href="https://play.google.com/store/apps/details?id=com.nodemtech.radiobrasil" data-caption-animate="fadeInUp" data-caption-delay="450">Download App on Google Play</a>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+        <div class="swiper-meta">
+          <ul class="links">
+            <li><a class="icon icon-meta mdi mdi-facebook" href="https://m.facebook.com/Radio-Brasil-109821340863599/"></a></li>
+            <!--
 
-        <!-- Mobile Device -->
-        <div class="welcome-mobile-device text-right">
-            <img src="img/bg-img/banner1.png" alt="">
-            <img src="img/bg-img/wel-dev-2.png" alt="">
+             twitter link 
+
+             <li><a class="icon icon-meta mdi mdi-twitter" href="https://twitter.com/RadioUK2"></a></li> -->
+            
+           
+          </ul>
         </div>
-    </section>
-   
-    <div class="about-app-area" id="about">
+      </section>
+      <!--Player-->
+      <section class="section section-xs bg-primary-gradient ">
+        <div class="container">
+          <div class="shell">
+            <div class="range range-xs-center">
 
-        <!-- Shape -->
-        <div class="about-us-bg-shape">
-            <img src="img/core-img/about-bg1.png" alt="">
-        </div>
-
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <!-- About App Slider -->
-                <div class="col-12 col-md-7">
-                    <div class="about-apps-slider owl-carousel">
-                        <!-- Single Slide -->
-                        <div class="app-single-slide">
-                            <img src="img/bg-img/favourite.png" alt="">
-                        </div>
-                        <!-- Single Slide -->
-                        <div class="app-single-slide">
-                            <img src="img/bg-img/record.png" alt="">
-                        </div>
-                        <!-- Single Slide -->
-                        <div class="app-single-slide">
-                            <img src="img/bg-img/favourite.png" alt="">
-                        </div>
-                        <!-- Single Slide -->
-                        <div class="app-single-slide">
-                            <img src="img/bg-img/record.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <!-- About App Content -->
-                <div class="col-12 col-md-5">
-                    <div class="about-app-content">
-                        <h2>Enjoy Brazilian Radio</h2>
-                        <p><Strong>Try our new Free Brazil Radio App,  Free – absolutely free online radio with a lot of stations, No brazilian Vpn is Needed! To start an amazing Brazil party just launch this radio streaming app, choose the station and listen to perfect national music or hot news!</Strong> </p></div></br>
-                        <div class="app-feature-icon d-flex">
-                            <!-- Single App Feature Icon  -->
-                            <div class="single-app-feature-icon d-flex align-items-center justify-content-center">
-                                <img src="img/bg-img/alarms1.png" alt="">
-                            </div>
-                            <!-- Single App Feature Icon  -->
-                            <div class="single-app-feature-icon d-flex align-items-center justify-content-center">
-                                <img src="img/bg-img/icon-2.png" alt="">
-                            </div>
-                            <!-- Single App Feature Icon  -->
-                            <div class="single-app-feature-icon d-flex align-items-center justify-content-center">
-                                <img src="img/bg-img/rec23.png" alt="">
-                            </div>
-                            <!-- Single App Feature Icon  -->
-                            <div class="single-app-feature-icon d-flex align-items-center justify-content-center">
-                                <img src="img/bg-img/icon-4.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-      <section>
-            <div class="container"></br>
-                <div align="center"><h2>Stream Live all Brazilian Radio Stations</h2></div>
-                </br>
-                <div class="about-apps-slider owl-carousel">
-                    <div class="item">
-                        <img src="img/stations/alphafm.jpg" alt=""><p align="center">Alpha Fm </p>
-                    </div>
-                    
-                    <div class="item">
-                        <img src="img/stations/Alvoradafm.jpg" alt=""><p align="center">Alvorada Fm</p>
-                    </div>
-                     <div class="item">
-                        <img src="img/stations/antena1.jpg" alt=""><p align="center">Antena 1</p>
-                    </div>
-                     <div class="item">
-                        <img src="img/stations/BahiaFM.jpg" alt=""><p align="center">Bahia Fm</p>
-                    </div>
-                    <div class="item">
-                        <img src="img/stations/boavistafm.jpg" alt=""><p align="center">Boa Vista Fm</p>
-                    </div>
-                    <div class="item">
-                        <img src="img/stations/bossjazzbrasil.jpg" alt=""><p align="center">Boss Jazz Brasil</p>
-                    </div>
-                    <div class="item">
-                        <img src="img/stations/dumontfm.jpg" alt=""><p align="center">Dumont 104.3 Fm</p>
-                    </div>
-                    <div class="item">
-                        <img src="img/stations/enerfiafm.jpg" alt=""><p align="center">Energia Fm</p>
-                    </div>
-                    <div class="item">
-                        <img src="img/stations/imperialfm.jpg" alt=""><p align="center">Imperial Fm</p>
-                    </div>
-                    <div class="item">
-                        <img src="img/stations/inconfidenciafm.jpg" alt=""><p align="center">Incofidencia Fm</P>
-                    </div>
-                    <div class="item">
-                        <img src="img/stations/latinbrasilradio.jpg" alt=""><p align="center">Nova Brasil Fm</p>
-                    </div>
-                     <div class="item">
-                        <img src="img/stations/metroplitana.jpg" alt=""><p align="center">Metropolitana 98.5 Fm</p>
-                    </div>
-                     <div class="item">
-                        <img src="img/stations/radiocantate.jpg" alt=""><p align="center">Cantate 104.5 Fm</p>
-                    </div>
-                    <div class="item">
-                        <img src="img/stations/RadioCidade.jpg" alt=""><p align="center">Radio Cidade</p>
-                    </div>
-                     <div class="item">
-                        <img src="img/stations/radiodisney.jpg" alt=""><p align="center">Radio Disney</p>
-                    </div>
-                     <div class="item">
-                        <img src="img/stations/RadioEvangelizar.jpg" alt=""><p align="center">Radio Evangelizar</p>
-                    </div>
-                     <div class="item">
-                        <img src="img/stations/radiogaucha.jpg" alt=""><p align="center">Radio Gaucha</p>
-                    </div>
-                     <div class="item">
-                        <img src="img/stations/radioitapoan.jpg" alt=""><p align="center">Itapoan 97.5 Fm</p>
-                    </div>
-                     <div class="item">
-                        <img src="img/stations/Radio-JBFM.jpg" alt=""><p align="center">Radio JB 99.9 Fm</p>
-                    </div>
-                    <div class="item">
-                        <img src="img/stations/radiojovempan.jpg" alt=""><p align="center">JP News</p>
-                    </div>
-                    <div class="item">
-                        <img src="img/stations/radiosaudadefm.jpg" alt=""><p align="center">Saudade Fm</p>
-                    </div>
-                    <div class="item">
-                        <img src="img/stations/redemelodiafm.jpg" alt=""><p align="center">Melodia 97.5 Fm </p>
-                    </div>
-                    <div class="item">
-                        <img src="img/stations/santanafm.jpg" alt=""><p align="center">Santana Fm</p>
-                    </div>
-                    <div class="item">
-                        <img src="img/stations/spacofm.jpg" alt=""><p align="center">Spaco Fm</p>
-                    </div>
-                    <div class="item">
-                        <img src="img/stations/transcontinentalfm.jpg" alt=""><p align="center">Transcontinental Fm</p>
-                    </div>
-                    <div class="item">
-                        <img src="img/stations/uspsaupaulo.jpg" alt=""><p align="center">USP Fm</p>
-                    </div>
-                    
-                    
-                </div>
-            </div>
+              <div class="col-lg-12">
         
-        </section>
 
+              <div id="player_container" class="col-lg-12" >
 
-    <section class="app-faq-area">
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Variety of Music Genres-->
+      <section class="section section-lg">
         <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-6">
-                    <div class="app-faq-content">
-                        <h2> Listen From anywhere in <br>The World </h2>
-                        <p>Looking for a radio with all channels in Brazil? Look no further, you found it. Enjoy all radio channels from Brazil with this powerful Radio App for internet streaming, Get access to the best Brazilian radios of all musical genres and types, plus news, sports, etc. Listen to Brazilian RADIO stations from Brazil and all over the world with a single click.</p>
-                        <!-- Accordian Area -->
-                        <div class="accordions" id="accordion" role="tablist" aria-multiselectable="true">
-                            <!-- single accordian area start -->
-                            <div class="panel single-accordion">
-                                <h6><a role="button" class="collapsed" aria-expanded="true" aria-controls="collapseOne" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Never Miss Out
-                                    <span class="accor-open"><i class="fa fa-plus" aria-hidden="true"></i></span>
-                                    <span class="accor-close"><i class="fa fa-minus" aria-hidden="true"></i></span>
-                                    </a></h6>
-                                <div id="collapseOne" class="accordion-content collapse">
-                                    <p>🎯 Wake up to your favourite radio station by setting an Alarm</p>
-                                </div>
-                            </div>
-                            <!-- single accordian area start -->
-                            <div class="panel single-accordion">
-                                <h6>
-                                    <a role="button" class="collapsed" aria-expanded="true" aria-controls="collapseTwo" data-parent="#accordion" data-toggle="collapse" href="#collapseTwo">Quality Sound
-                                        <span class="accor-open"><i class="fa fa-plus" aria-hidden="true"></i></span>
-                                        <span class="accor-close"><i class="fa fa-minus" aria-hidden="true"></i></span>
-                                        </a>
-                                </h6>
-                                <div id="collapseTwo" class="accordion-content collapse">
-                                    <p> 🎯 Good and Clear Sound with no static Interference</p>
-                                </div>
-                            </div>
-                            <!-- single accordian area start -->
-                            <div class="panel single-accordion">
-                                <h6>
-                                    <a role="button" aria-expanded="true" aria-controls="collapseThree" class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#collapseThree">Playback
-                                        <span class="accor-open"><i class="fa fa-plus" aria-hidden="true"></i></span>
-                                        <span class="accor-close"><i class="fa fa-minus" aria-hidden="true"></i></span>
-                                    </a>
-                                </h6></br>
-                               <p></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+          <div class="block-lg text-center">
+            <h2>Bringing The World Closer To You</h2>
+            <p><strong>Radio Brazil (Brasil), Allows you to listen and record live to all Brazilian Radio stations for Free. Enjoy local and international radio in Portuguese and English.</strong></p>
+            <p><strong>Click on Any Radio Station to Start Listening</strong></p>
+          </div>
+          <div id="radios_container" class="row row-30 justify-content-center">
 
-        <!-- App Users Map Area -->
-        <div class="app-users-map-area">
-            <img src="img/bg-img/world-map.png" alt="">
-            <div class="map-pins">
-                <!-- Single Pin -->
-                <div class="single-map-pin"></div>
-                <!-- Single Pin -->
-                <div class="single-map-pin"></div>
-                <!-- Single Pin -->
-                <div class="single-map-pin"></div>
-                <!-- Single Pin -->
-                <div class="single-map-pin"></div>
-            </div>
+              <!--Main Content , Fetch From Firebase CouldFirestore-->
+
+           
+
+              <script>
+                  //Print the ones with positions first
+
+                  db.collection("RadioBR").orderBy("position","asc").get().then((querySnapshot) => {
+                      querySnapshot.forEach((doc) => {
+
+                          var station_name = doc.data().station_name;
+                          var img_url = doc.data().img_url;
+                          var stream_url = doc.data().stream_url;
+
+                        //  console.log(station_name+" :"+doc.data().position);     
+          
+                          document.getElementById("radios_container").innerHTML += 
+                          '<div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 wow fadeInLeft">'+
+                          '<a href="#player_container" class="variety-box-wrapper" onclick="launchPlayer(\''+station_name+'\',\''+stream_url+'\',\''+img_url+'\');"> <figure class="variety-box"><div class="variety-media"><img  src="'+img_url+'" alt="Radio UK" width="128px" height="128px" /><h4 style="margin:10px">'+station_name+'</h4></div></figure></a></div>';
+                      
+                        
+                      });
+                    });
+
+
+
+                  // Print all without positions 
+                  // db.collection("RadioStations").get().then((querySnapshot) => {
+                  //     querySnapshot.forEach((doc) => {
+
+
+                  //         var station_name = doc.data().station_name;
+                  //         var img_url = doc.data().img_url;
+                  //         var stream_url = doc.data().stream_url;
+
+                  //        // console.log(station_name+" :"+doc.data().position);
+
+            
+                  //         if(doc.data().position == undefined)
+          
+                  //         document.getElementById("radios_container").innerHTML += 
+                  //         '<div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 wow fadeInLeft">'+
+                  //         '<a href="#player_container" class="variety-box-wrapper" onclick="launchPlayer(\''+station_name+'\',\''+stream_url+'\',\''+img_url+'\');"> <figure class="variety-box"><div class="variety-media"><img  src="'+img_url+'" alt="Radio UK" width="128px" height="128px" /><h4 style="margin:10px">'+station_name+'</h4></div></figure></a></div>';
+                          
+
+                  //     });
+                  // });
+
+
+                  //Launches Specific Radio when clicked 
+                  function launchPlayer(station_name,stream_url,img_url){
+
+                      document.getElementById("player_container").innerHTML='  <img height="128px" width="128px" src="'+img_url+'" style="margin: 10px"> <h3 style="margin: 10px">'+station_name+'</h3><audio controls preload="auto" autoplay> <source src="'+stream_url+'" > Your browser does not support the audio element.</audio>';
+
+                  }
+
+              </script>
+
+
+
+          
+          
+         
+
         </div>
-    </section>
- 
-    <section class="pricing-plan-area section_padding_100_70 clearfix" id="pricing">
+        </div>
+      </section>
+      <!--	Schedule of Radio Shows-->
+      
+ <!-- Call to action-->
+      <section class="section section-xs bg-primary-gradient">
         <div class="container">
-
-            <div class="row no-gutters">
-                <!-- Single Price Plan -->
-                <div class="col-12 col-md-4">
-                    <!-- Package Price  -->
-                    <div class="single-price-plan text-center">
-                        <!-- Package Head -->
-                        <div class="package-head">
-                            <p class="sub-title">Made for Radio</p>
-                            <div >
-                                <p>Built and developed from the ground up</p> 
-                            </div>
-                            
-                        </div>
-                       
-                        <div class="package-info">
-                          
-                        </div>
-                       
-                    </div>
-                </div>
-
-                <!-- Single Price Plan -->
-                <div class="col-12 col-md-4">
-                    <!-- Package Price  -->
-                    <div class="single-price-plan active text-center">
-                        <!-- Package Head -->
-                        <div class="package-head">
-                            <p class="sub-title">By Radio People</p>
-                           
-                            
-                        </div>
-                        <!-- Package Description -->
-                       <p>Continously working to set Radio Standards</p>
-                        <!-- Package Info -->
-                        <div>
-                           
-                        </div>
-                        <!-- Order Button  -->
-                        <div class="plan-button">
-                            <a href="https://play.google.com/store/apps/details?id=com.nodemtech.radiobrasil">Download Playstore</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Price Plan -->
-                <div class="col-12 col-md-4">
-                    <!-- Package Price  -->
-                    <div class="single-price-plan text-center">
-                        <!-- Package Head -->
-                        <div class="package-head">
-                            <p class="sub-title">For Radio people</p>
-                            <div >
-                                <p>Always redifining people's popular radio taste</p>
-                            </div>
-                        
-                        </div>
-                        <!-- Package Description -->
-                        <div class="package-description">
-                      
-                        </div>
-                        <!-- Package Info -->
-                        <div class="package-info">
-                          
-                        </div>
-                        
-                    </div>
-                </div>
-
+          <div class="box-cta">
+            <div class="box-cta-inner">
+              <h3>Get a Better Experience Download Radio Brazil App Free</h3>
             </div>
+            <div class="box-cta-inner"><a class="button button-md button-white" href="https://play.google.com/store/apps/details?id=com.nodemtech.radiobrasil">Available on Playstore</a></div>
+          </div>
         </div>
-    </section>
-    <!-- ***** Pricing Plane Area End ***** -->
+      </section>
 
-    <!-- ***** Footer Area Start ***** -->
-    <footer class="footer-area text-center clearfix">
-        <!-- Shape 1 -->
-        <div class="footer-bg-shape">
-            <img src="img/core-img/footer-bg1.png" alt="Footer Shape">
-        </div>
-        <!-- Shape 2 -->
-        <div class="footer-bg-shape-2">
-            <img src="img/core-img/price-table.png" alt="">
-        </div>
-
-        <div class="container h-100">
-            <div class="row h-100 justify-content-center">
-                <div class="col-12 col-md-8">
-                    <div class="footer-content">
-                        <h2>Download Radio Brazil App </h2>
-                        <h4>Enjoy local and international radio in Portuguese and English. </h4>
-                    </div>
-                    <div class="app-download-area">
-                        <div class="app-download-btn active">
-                            <!-- Google Store Btn -->
-                            <a href="https://play.google.com/store/apps/details?id=com.nodemtech.radiobrasil"><i class="fa fa-android"></i><p class="mb-0"><span>available on</span> Google Store</p></a>
-                        </div>
-                      
-                    </div>
-                    <div class="footer-social-info">
-                       
-                        <a href="https://m.facebook.com/Radio-Brasil-109821340863599/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                      
-                    </div>
-                    <!-- Foooter Text-->
-                    <div class="copyright-text">
-                        <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Radio Brazil App | Nodem Technologies LTD  <a href="#" target="_blank">Privacy Policy</a> | <a href="#" target="_blank">DMCA</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-                    </div>
-                </div>
+      <!-- Why You Should Listen to OnWave-->
+      <section class="section section-lg">
+        <div class="container text-center">
+          <h2>Get Access to South America Top Radio Stations</h2>
+          <div class="row row-40 justify-content-center number-counter">
+            <div class="col-sm-6 col-lg-3 wow fadeInLeft">
+              <div class="blurb-icon-fill">
+                <div class="icon linearicons-star"><span class="index-counter"></span></div>
+                <h5 class="title">Best Music Selection</h5>
+                <p class="exeption">Radio Brazil offers its listeners the best music and podcasts in various Genres, from Local to International Hits.</p>
+              </div>
             </div>
+            <div class="col-sm-6 col-lg-3 wow fadeInLeft" data-wow-delay="0.1s">
+              <div class="blurb-icon-fill">
+                <div class="icon linearicons-news"><span class="index-counter"></span></div>
+                <h5 class="title">Trending News</h5>
+                <p class="exeption">Always Updated: Brazil radio hosts are always ready to share with you the latest regional and global news and updates.</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3 wow fadeInLeft" data-wow-delay="0.2s">
+              <div class="blurb-icon-fill">
+                <div class="icon linearicons-earth"><span class="index-counter"></span></div>
+                <h5 class="title">Available Everywhere</h5>
+                <p class="exeption">You can listen to our radio online via any devices, gadgets or radios from anywehre corner of the world.</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3 wow fadeInLeft" data-wow-delay="0.3s">
+              <div class="blurb-icon-fill">
+                <div class="icon linearicons-music-note"><span class="index-counter"></span></div>
+                <h5 class="title">Quality Music</h5>
+                <p class="exeption">Radio Brazil enables you to Enjoy your Favourite Radio Channels free from any Static Interference.</p>
+              </div>
+            </div>
+          </div>
         </div>
-    </footer>
-    <!-- ***** Footer Area End ***** -->
-
-    <!-- jQuery-2.2.4 js -->
-    <script src="js/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
-    <script src="js/popper.min.js"></script>
-    <!-- Bootstrap js -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- All Plugins js -->
-    <script src="js/plugins.js"></script>
-    <!-- Active js -->
-    <script src="js/active.js"></script>
-</body>
-
+      </section>
+     
+     
+     
+      <!-- Page Footer--><!-- <a class="banner" href="https://www.templatemonster.com/website-templates/monstroid2.html" target="_blank"><img src="images/monstroid_big_02.jpg" alt="" height="0"/></a> -->
+      
+      <footer class="section footer-2">
+        <div class="container">
+          <div class="row row-40">
+            <div class="col-md-6 col-lg-3"><a class="footer-logo" href="index.html"><img src="images/RkeLogo3.png" alt="" width="45" height="27"/></a>
+              <p>Radio Brazil (Brasil), Allows you to listen live to all Brazilian Radio stations for Free from anywhere in the world.</p>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <h5 class="text-white title">Contact Information</h5>
+              <ul class="contact-box">
+                <li>
+                  <div class="unit unit-horizontal unit-spacing-xxs">
+                    <div class="unit-left"><span class="icon mdi mdi-map-marker accent-icon"></span></div>
+                    <div class="unit-body"><a href="http://nodemtech.com">Nairobi <br class="veil reveal-lg-inline">KENYA</a></div>
+                  </div>
+                </li>
+               
+                <li>
+                  <div class="unit unit-horizontal unit-spacing-xxs">
+                    <div class="unit-left"><span class="icon mdi mdi-email-outline accent-icon"></span></div>
+                    <div class="unit-body"><a href="https://nodemtech.com/contact/">info@radiobrasil.nodemtech.com</a></div>
+                  </div>
+                </li>
+              </ul>
+              <div class="group-md group-middle social-items"><a class="icon icon-md novi-icon mdi mdi-facebook" href="https://m.facebook.com/Radio-Brasil-109821340863599/"></a></a></div>
+            </div>
+     
+          </div>
+          <!-- Rights-->
+          <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span> <span>Radio Brazil App</span>. All Rights Reserved by Radio Brazil. Designed & Developed by <a href="https://nodemtech.com">Nodem Technologies </a> <a class="rd-nav-link" href="privacy.html"> Privacy Policy </a> <a class="rd-nav-link" href="dmca.html"> DMCA </a>
+          </p>
+        </div>
+      </footer>
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Javascript-->
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
