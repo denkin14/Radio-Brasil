@@ -9,7 +9,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name ="application-name" content="radiobrasil.nodemtech.com">
     <meta name="description" content="Radio Brasil App, Radio Brazil, Listen/Stream Live all your favourite Brazil brasil Radio Stations Online for Free. Click on your FM station and Enjoy"> 
-    <meta name="keywords" content="Radio Brasil App, radio brazil app, listen to free internet radio, nodem tech, listen to brasil brazil radio for free, free radio app, top brazilian radio stations, record live radio, radio app, radio love in brasil, Radio Alfa FM, Rádio Transcontinental FM, Rádio JB FM, Rádio Antena 1, Dumont FM, ZYX820, Energia 97, Ràdio Itapoan FM, Rádio Gaúcha, Rádio Alvorada FM, Rádio Inconfidência, Rádio Bossa Jazz Brasil, Rádio Bahia FM, Boa Vista FM, Rede Skol, Radio Cidade, Ràdio Jovem Pan SP,Latina Brasil, Rádio Saudade FM, Sant'Ana FM, Cantate FM, Rede Melodia, Transamérica Pop, Rádio Rio de Janeiro, 1.FM - Love Classics, ZYD463, Amor Sem Fim, Alvorada FM, Kiss FM, Gaúcha, listen to internet radio, best brazilian radio, top radio stations in brazil">
+    <meta name="keywords" content="Radio Brasil App, radio brazil app, listen to free internet radio, nodem tech, listen to brasil brazil radio for free, free radio app, top brazilian radio stations, record live radio, radio app, radio love in brasil, Radio Alfa FM, Rádio Transcontinental FM, Rádio JB FM, Ràdio Jovem Pan SP,Latina Brasil, Rádio Saudade FM, Sant'Ana FM, Cantate FM, Rede Melodia, Transamérica Pop, Rádio Rio de Janeiro, 1.FM - Love Classics, ZYD463, Amor Sem Fim, Alvorada FM, Kiss FM, Gaúcha, listen to internet radio, best brazilian radio, top radio stations in brazil">
     <meta name ="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
@@ -60,9 +60,6 @@
 
 
 </script>
-
-
-
 
 
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
@@ -121,31 +118,7 @@
       </header>
       <!-- Swiper-->
       <section class="section swiper-container swiper-slider swiper-slider-2" data-loop="false" data-autoplay="false" data-simulate-touch="false" data-slide-effect="fade">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide context-dark" data-slide-bg="images/cov.jpg">
-            <div class="swiper-slide-caption">
-              <div class="container">
-                <div class="row justify-content-lg-left">
-                  <div class="col-md-12 col-xl-10">
-                    <h1 data-caption-animate="fadeInUp" data-caption-delay="100">Listen From Anywhere in the World</h1><a class="button button-lg button-primary" href="https://play.google.com/store/apps/details?id=com.nodemtech.radiobrasil" data-caption-animate="fadeInUp" data-caption-delay="450">Download App on Google Play</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-meta">
-          <ul class="links">
-            <li><a class="icon icon-meta mdi mdi-facebook" href="https://m.facebook.com/Radio-Brasil-109821340863599/"></a></li>
-            <!--
-
-             twitter link 
-
-             <li><a class="icon icon-meta mdi mdi-twitter" href="https://twitter.com/RadioUK2"></a></li> -->
-            
-           
-          </ul>
-        </div>
+        
       </section>
       <!--Player-->
       <section class="section section-xs bg-primary-gradient ">
@@ -154,8 +127,6 @@
             <div class="range range-xs-center">
 
               <div class="col-lg-12">
-        
-
               <div id="player_container" class="col-lg-12" >
 
               </div>
@@ -176,9 +147,12 @@
 
               <!--Main Content , Fetch From Firebase CouldFirestore-->
 
-           
-
-              <script>
+          </div>
+        </div>
+      </section>
+      
+      <section> 
+          <script>
                   //Print the ones with positions first
 
                   db.collection("RadioBR").orderBy("position","asc").get().then((querySnapshot) => {
@@ -191,57 +165,23 @@
                         //  console.log(station_name+" :"+doc.data().position);     
           
                           document.getElementById("radios_container").innerHTML += 
-                          '<div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 wow fadeInLeft">'+
-                          '<a href="#player_container" class="variety-box-wrapper" onclick="launchPlayer(\''+station_name+'\',\''+stream_url+'\',\''+img_url+'\');"> <figure class="variety-box"><div class="variety-media"><img  src="'+img_url+'" alt="Radio UK" width="128px" height="128px" /><h4 style="margin:10px">'+station_name+'</h4></div></figure></a></div>';
-                      
+                          '<div class="col-sm-4 col-md-3 col-lg-2 col-xl-1 wow fadeInLeft">'+
+                          '<a href="#player_container" onclick="launchPlayer(\''+station_name+'\',\''+stream_url+'\',\''+img_url+'\');"> <figure class="variety-box"><div class="variety-media"><img  src="'+img_url+'" alt="Radio Brasil" width="64px" height="64px" /><p style="margin:4px"></p></div></figure></a></div>';
                         
                       });
                     });
 
-
-
-                  // Print all without positions 
-                  // db.collection("RadioStations").get().then((querySnapshot) => {
-                  //     querySnapshot.forEach((doc) => {
-
-
-                  //         var station_name = doc.data().station_name;
-                  //         var img_url = doc.data().img_url;
-                  //         var stream_url = doc.data().stream_url;
-
-                  //        // console.log(station_name+" :"+doc.data().position);
-
-            
-                  //         if(doc.data().position == undefined)
-          
-                  //         document.getElementById("radios_container").innerHTML += 
-                  //         '<div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 wow fadeInLeft">'+
-                  //         '<a href="#player_container" class="variety-box-wrapper" onclick="launchPlayer(\''+station_name+'\',\''+stream_url+'\',\''+img_url+'\');"> <figure class="variety-box"><div class="variety-media"><img  src="'+img_url+'" alt="Radio UK" width="128px" height="128px" /><h4 style="margin:10px">'+station_name+'</h4></div></figure></a></div>';
-                          
-
-                  //     });
-                  // });
-
-
                   //Launches Specific Radio when clicked 
                   function launchPlayer(station_name,stream_url,img_url){
 
-                      document.getElementById("player_container").innerHTML='  <img height="128px" width="128px" src="'+img_url+'" style="margin: 10px"> <h3 style="margin: 10px">'+station_name+'</h3><audio controls preload="auto" autoplay> <source src="'+stream_url+'" > Your browser does not support the audio element.</audio>';
+                      document.getElementById("player_container").innerHTML='  <img height="64px" width="64px" src="'+img_url+'" style="margin: 4px"> <p style="margin: 4px">'+station_name+'</p><audio controls preload="auto" autoplay> <source src="'+stream_url+'" > Your browser does not support the audio element.</audio>';
 
                   }
-
               </script>
 
-
-
-          
-          
-         
-
-        </div>
-        </div>
-      </section>
-      <!--	Schedule of Radio Shows-->
+        </section>
+     
+      <!--  Schedule of Radio Shows-->
       
  <!-- Call to action-->
       <section class="section section-xs bg-primary-gradient">
@@ -254,46 +194,7 @@
           </div>
         </div>
       </section>
-
-      <!-- Why You Should Listen to OnWave-->
-      <section class="section section-lg">
-        <div class="container text-center">
-          <h2>Get Access to South America Top Radio Stations</h2>
-          <div class="row row-40 justify-content-center number-counter">
-            <div class="col-sm-6 col-lg-3 wow fadeInLeft">
-              <div class="blurb-icon-fill">
-                <div class="icon linearicons-star"><span class="index-counter"></span></div>
-                <h5 class="title">Best Music Selection</h5>
-                <p class="exeption">Radio Brazil offers its listeners the best music and podcasts in various Genres, from Local to International Hits.</p>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-3 wow fadeInLeft" data-wow-delay="0.1s">
-              <div class="blurb-icon-fill">
-                <div class="icon linearicons-news"><span class="index-counter"></span></div>
-                <h5 class="title">Trending News</h5>
-                <p class="exeption">Always Updated: Brazil radio hosts are always ready to share with you the latest regional and global news and updates.</p>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-3 wow fadeInLeft" data-wow-delay="0.2s">
-              <div class="blurb-icon-fill">
-                <div class="icon linearicons-earth"><span class="index-counter"></span></div>
-                <h5 class="title">Available Everywhere</h5>
-                <p class="exeption">You can listen to our radio online via any devices, gadgets or radios from anywehre corner of the world.</p>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-3 wow fadeInLeft" data-wow-delay="0.3s">
-              <div class="blurb-icon-fill">
-                <div class="icon linearicons-music-note"><span class="index-counter"></span></div>
-                <h5 class="title">Quality Music</h5>
-                <p class="exeption">Radio Brazil enables you to Enjoy your Favourite Radio Channels free from any Static Interference.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-     
-     
-     
+ 
       <!-- Page Footer--><!-- <a class="banner" href="https://www.templatemonster.com/website-templates/monstroid2.html" target="_blank"><img src="images/monstroid_big_02.jpg" alt="" height="0"/></a> -->
       
       <footer class="section footer-2">
