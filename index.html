@@ -62,6 +62,8 @@
 </script>
 
 
+
+
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <div class="preloader">
       <div class="preloader-body">
@@ -85,47 +87,75 @@
                   <!-- RD Navbar Brand-->
                <!--    <div class="rd-navbar-brand"><a class="brand" href="index.html"><img src="images/RkeLogo3.png" alt="" width="45" height="24"/></a>
                   </div> -->
+
+
+            <script TYPE="text/javascript"> 
+            //      function popup(mylink, windowname) 
+            //     { if (! window.focus)return true; 
+            //       var href; 
+            //       if (typeof(mylink) == 'string') href=mylink; 
+            //       else href=mylink.href;
+            //        window.open(href, windowname, 'width=500,height=300,scrollbars=yes'); 
+            //        return false; } 
+
+
+            //     </script>
+
              <div class="rd-navbar-main-element">
                   <div class="rd-navbar-nav-wrap"> 
 
             <style> #nav { background: lightgray; overflow: auto; } #nav li { float: left; list-style-type: none; padding: 10px; } </style> 
 
                <ul id="nav"> 
-                 
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html"><img src="images/logo32c.png" alt="chile"></a>
+                     <li class="rd-nav-item"><a class="rd-nav-link" href="index.html"><img src="images/flags/kenya20.png" alt="Kenya"></a>
                       </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="about.html"><img src="images/logo2.png" alt="Brasil"></a>
+                     <li><a HREF="https://radiouk.nodemtech.com" onClick="return popup(this, 'RadioUK')"><img src="images/flags/uk20.png" alt="UK"></a></li>
+                      
+                      <li><a href="https://radiobrasil.nodemtech.com" ><img src="images/flags/brasil20.png" alt="Brazil"></a>
                       </li>
-                       <li class="rd-nav-item"><a class="rd-nav-link" href="index.html"><img src="images/logo32.png" alt="australia"></a>
+                      
+                       <li><a href="https://radiousa.nodemtech.com"><img src="images/flags/usa20.png" alt="USA"></a>
                       </li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="about.html"><img src="images/rnetherlands32.png" alt="netherlands"></a>
-                      </li> 
-                     <li class="rd-nav-ite"><a class="rd-nav-link" href="index.html"><img src="images/logo32d.png" alt="australia"></a>
-                      </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="about.html"><img src="images/logo32t.png" alt="Turkey"></a>
-                      </li>
-                     </ul>
 
+                      <li><a href="http://radionigeria.nodemtech.com" onClick="return popup(this, 'RadioNR')"><img src="images/flags/nigeria20.png" alt="Nigeria"></a>
+                      </li>
+
+                     <li><a href="http://radiocanada.nodemtech.com" onClick="return popup(this, 'RadioCA')"><img src="images/flags/canada20.png" alt="Canada"></a>
+                     </li>
+                     <li><a href="http://radiomexico.nodemtech.com" onClick="return popup(this, 'RadioMX')"><img src="images/flags/mexico20.png" alt="Mexico"></a>
+                     </li>
+
+                     <li><a class="rd-nav-link" href="about.html"><img src="images/flags/netherlands20.png" alt="Netherlands"></a>
+                     </li> 
+                     
+                      
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="about.html"><img src="images/flags/turkey20.png" alt="Turkey"></a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="about.html"><img src="images/flags/chile20.png" alt="Chile"></a>
+                      </li>
+                       <li class="rd-nav-item"><a class="rd-nav-link" href="about.html"><img src="images/flags/colombia20.png" alt="Colombia"></a>
+                      </li>
+                       <li class="rd-nav-item"><a class="rd-nav-link" href="about.html"><img src="images/flags/greece20.png" alt="Greece"></a>
+                      </li>
+                       <li class="rd-nav-item"><a class="rd-nav-link" href="about.html"><img src="images/flags/italy20.png" alt="Italy"></a>
+                      </li>
+                       
+                       <li class="rd-nav-item"><a class="rd-nav-link" href="about.html"><img src="images/flags/agentina20.png" alt="Argentina"></a>
+                      </li>
+                       <li class="rd-nav-item"><a class="rd-nav-link" href="about.html"><img src="images/flags/spain20.png" alt="Spain"></a>
+                      </li>
+                      
+
+
+                     </ul>
 
 
                 </div>
                 </div>
                     <!-- RD Navbar Nav-->
                     
-                   
-                 
                   <!-- RD Navbar Search-->
-                  <div class="rd-navbar-search">
-                    <button class="rd-navbar-search-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-search"><span></span></button>
-                    <form class="rd-search" action="#" method="GET">
-                      <div class="form-wrap">
-                        <label class="form-label" for="rd-navbar-search-form-input">Search</label>
-                        <input class="rd-navbar-search-form-input form-input" id="rd-navbar-search-form-input" type="text" name="s" autocomplete="off">
-                        <div class="rd-search-results-live" id="rd-search-results-live"></div>
-                      </div>
-                      <button class="rd-search-form-submit mdi mdi-magnify" type="submit"></button>
-                    </form>
-                  </div>
+                  
                 </div>
               </div>
             </div>
@@ -175,6 +205,9 @@
       <section> 
           <script>
                   //Print the ones with positions first
+                  var count = 0;
+
+
 
                   db.collection("RadioBR").orderBy("position","asc").get().then((querySnapshot) => {
                       querySnapshot.forEach((doc) => {
@@ -183,14 +216,49 @@
                           var img_url = doc.data().img_url;
                           var stream_url = doc.data().stream_url;
 
-                        //  console.log(station_name+" :"+doc.data().position);     
+                          console.log(station_name+" :"+img_url);    
+                        
+                         if(img_url !== '') 
           
+                          {
+                          count++;
+                                                      
                           document.getElementById("radios_container").innerHTML += 
                           '<div class="col-sm-4 col-md-3 col-lg-2 col-xl-1 wow fadeInLeft">'+
-                          '<a href="#player_container" onclick="launchPlayer(\''+station_name+'\',\''+stream_url+'\',\''+img_url+'\');"> <figure class="variety-box"><div class="variety-media"><img  src="'+img_url+'" alt="Radio Brasil" width="64px" height="64px" /><p style="margin:4px"></p></div></figure></a></div>';
+                          '<a href="#player_container" onclick="launchPlayer(\''+station_name+'\',\''+stream_url+'\',\''+img_url+'\');"> <figure class="variety-box"><div class="variety-media"><img  src="'+img_url+'" alt="Radio Brasil" width="64px" height="64px" /><p style="margin:4px"></p></div></figure></a></div>'; 
+
+                        }
                         
                       });
                     });
+
+
+                       db.collection("RadioBR").get().then((querySnapshot) => {
+                       querySnapshot.forEach((doc) => {
+
+
+                          var station_name = doc.data().station_name;
+                           var img_url = doc.data().img_url;
+                          var stream_url = doc.data().stream_url;
+
+                         console.log(station_name+" :"+doc.data().position);
+
+            
+                          if(doc.data().position == undefined)
+
+                          if(count == 50)
+                          
+                          break;
+
+                          count++;                          
+
+                          document.getElementById("radios_container").innerHTML += 
+                          '<div class="col-sm-4 col-md-3 col-lg-2 col-xl-1 wow fadeInLeft">'+
+                          '<a href="#player_container" onclick="launchPlayer(\''+station_name+'\',\''+stream_url+'\',\''+img_url+'\');"> <figure class="variety-box"><div class="variety-media"><img  src="'+img_url+'" alt="Radio Brasil" width="64px" height="64px" /><p style="margin:4px"></p></div></figure></a></div>';
+                          
+                         });
+                    });
+
 
                   //Launches Specific Radio when clicked 
                   function launchPlayer(station_name,stream_url,img_url){
