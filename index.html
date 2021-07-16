@@ -244,17 +244,17 @@
                          console.log(station_name+" :"+doc.data().position);
 
             
-                          if(doc.data().position == undefined)
+                          if(doc.data().position == undefined && img_url != '')
 
-                          if(count == 50)
-                          
-                          break;
+                          if(count <= 50){
+                           
 
-                          count++;                          
+                          count++;                       
 
                           document.getElementById("radios_container").innerHTML += 
                           '<div class="col-sm-4 col-md-3 col-lg-2 col-xl-1 wow fadeInLeft">'+
                           '<a href="#player_container" onclick="launchPlayer(\''+station_name+'\',\''+stream_url+'\',\''+img_url+'\');"> <figure class="variety-box"><div class="variety-media"><img  src="'+img_url+'" alt="Radio Brasil" width="64px" height="64px" /><p style="margin:4px"></p></div></figure></a></div>';
+                        }
                           
                          });
                     });
